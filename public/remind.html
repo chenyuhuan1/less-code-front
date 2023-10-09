@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>低代码</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="cfpa-remind">
+    <div>
+      <img src="./images/bg1.png" />
+    </div>
+    <div class="cfpa-remind-button">
+      <button id="continue">继 续 访 问</button>
+      <button id="download">客户端下载</button>
+    </div>
+    <h1>建议您安装客户端或使用最新版谷歌浏览器</h1>
+    <h1>
+      <a href="./client/低代码平台.exe" title="运营管理客户端下载">客户端下载</a>&emsp;
+      <a href="https://sm.myapp.com/original/Browser/67.0.3396.62_chrome_installer.exe" title="谷歌浏览器直接下载">浏览器直接下载</a>&emsp;
+      <a href="https://pc.qq.com/category/c3.html" title="谷歌浏览器腾讯软件中心下载">浏览器腾讯软件中心下载</a>
+    </h1>
+  </div>
+  <script>
+    var continueBtn = document.getElementById('continue')
+    var downloadBtn = document.getElementById('download')
+    continueBtn.addEventListener("click", function (event) {
+      sessionStorage.setItem("continue", "continue");
+      window.open('../index.html', '_self')
+    }, false)
+    downloadBtn.addEventListener("click", function (event) {
+      window.open('./client/低代码平台.exe', '_self')
+    }, false)
+  </script>
+</body>
+</html>
